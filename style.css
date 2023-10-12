@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #151513;
+}
+
+.container {
+    padding: 10px 0;
+    white-space: nowrap;
+    background: #fff;
+    overflow: hidden;
+}
+
+.container:hover .carousel{
+    animation-play-state: paused;
+}
+
+.carousel {
+    display: inline-block;
+    animation: 11s animate infinite linear;
+}
+
+.carousel img {
+    height: 120px;
+    aspect-ratio: 4/3;
+    margin-inline: 25px;
+}
+
+@keyframes animate {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
